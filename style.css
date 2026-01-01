@@ -1,0 +1,270 @@
+/* Reset e Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --primary-color: #414447;
+    --accent-color: #2980b9;
+    --skills-color: #2980b9;
+    --light-bg: #f4f4f4;
+    --text-color: #333;
+}
+
+/* Padding top al body per compensare l'header fisso */
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    padding-top: 80px; 
+}
+
+/* Header & Navbar Fissa */
+header {
+    background-color: var(--primary-color);
+    width: 100%;
+    position: fixed; /* Fissa l'header in alto */
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    height: 80px; 
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hamburger Icon (for mobile)(Hidden on Desktop) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh; /* Ridotto leggermente per bilanciare l'header */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Utility Classes */
+.container {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    background: var(--skills-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9px;
+}
+
+/* Resume Grid Layout */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background: rgb(251, 251, 251);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 9px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--primary-color);
+}
+
+.card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.card span {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+/* Form Styles */
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* LinkedIn Button Style */
+.linkedin-btn {
+    color: #0077b5;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.1s;
+}
+
+.linkedin-btn:hover {
+    transform: scale(1.05);
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    width: 100%;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Mobile Rules */
+@media (max-width: 768px) {
+    .resume-grid, .contact-wrapper {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
