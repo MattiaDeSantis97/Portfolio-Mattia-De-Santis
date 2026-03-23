@@ -50,27 +50,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links li a');
 
-    // Toggle menu al click dell'icona
+    // Toggle menu al click dell'icona hamburger
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
 
-    // Chiudi il menu quando si clicca su un link
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-    });
-
-    // Smooth Scrolling (per navigazione fluida)
+    // Smooth scrolling + chiusura menu mobile (un solo listener per link)
     links.forEach(link => {
         link.addEventListener('click', (e) => {
+            // Chiudi il menu mobile se aperto
+            navLinks.classList.remove('active');
+
             const targetId = link.getAttribute('href');
             // Se è un link interno (inizia con #)
-            if(targetId.startsWith('#')) {
+            if (targetId && targetId.startsWith('#')) {
                 e.preventDefault();
                 const targetSection = document.querySelector(targetId);
-                if(targetSection) {
+                if (targetSection) {
                     window.scrollTo({
                         // Sottrae 80px per compensare l'header fisso
                         top: targetSection.offsetTop - 80,
@@ -80,19 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Gestione Form (Simulazione)
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            if (name) {
-                alert(`Grazie ${name}, messaggio inviato con successo!`);
-                contactForm.reset();
-            }
-        });
-    }
 
     console.log("Portfolio di Mattia De Santis caricato.");
 });
