@@ -142,6 +142,12 @@ header {
     border-radius: 9px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-left: 4px solid var(--primary-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .card h4 {
@@ -206,6 +212,20 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 9px;
     width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
 .btn {
