@@ -92,6 +92,10 @@ header {
     margin-bottom: 0.5rem;
 }
 
+.hero-content .btn {
+    margin-top: 1.5rem;
+}
+
 /* Utility Classes */
 .container {
     padding: 4rem 2rem;
