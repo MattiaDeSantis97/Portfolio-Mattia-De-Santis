@@ -1,118 +1,311 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio di Mattia De Santis – Junior IT & Sports Director, aspiring computer engineer and AI specialist based in Rome, Italy.">
-    <title>Mattia De Santis | Portfolio</title>
+    <meta name="description" content="Mattia De Santis — from leading teams and operations to building software and AI. Project Engineer, Computer & AI Engineer based in Rome, Italy.">
+    <meta name="theme-color" content="#0b0b10">
+    <meta property="og:title" content="Mattia De Santis | Portfolio">
+    <meta property="og:description" content="From leading teams on the field to building intelligent systems in code.">
+    <meta property="og:type" content="website">
+    <title>Mattia De Santis · Aspiring Computer &amp; AI Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
 <body>
+    <!-- inline SVG icon sprite (Lucide-style) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+            <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+            <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+            <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+            <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+            <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 .5 5 .5 5 .5c-.28 1.15-.28 2.35 0 3.5A5.4 5.4 0 0 0 4 7.5c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+            <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+            <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5"/></symbol>
+            <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+            <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+            <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+            <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+            <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+            <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+            <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></symbol>
+            <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></symbol>
+        </defs>
+    </svg>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <header>
-        <nav class="navbar">
-            <div class="logo">M. DS.</div>
-            
-            <ul class="nav-links">
+        <nav class="navbar" aria-label="Primary">
+            <a href="#home" class="logo" aria-label="Mattia De Santis — home">
+                <span class="dot"></span> M·DS
+            </a>
+
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About me</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contacts</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+                    <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+                    <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+                </button>
+                <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                    <svg class="icon icon-open"><use href="#i-menu"/></svg>
+                    <svg class="icon icon-shut" style="display:none"><use href="#i-close"/></svg>
+                </button>
             </div>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Mattia De Santis</h1>
-            <h2>Junior IT &amp; Sports Director</h2>
-            <p>Aspiring computer engineer &amp; AI Specialist</p>
-            <a href="#contact" class="btn">Contact me</a>
-        </div>
-    </section>
-
-    <section id="about" class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="bio">
-                <p>Professional with solid experience in team management and operational processes. Currently enrolled in a Bachelor's degree in Computer Engineering and AI. I combine organizational leadership skills with a strong motivation towards software development.</p>
+    <main>
+        <!-- ── Hero ────────────────────────────────────────────────────── -->
+        <section id="home" class="hero">
+            <div class="hero-blobs" aria-hidden="true">
+                <span class="blob b1"></span>
+                <span class="blob b2"></span>
+                <span class="blob b3"></span>
             </div>
-            <div class="skills-grid">
-                <div class="skill-item">HTML5</div>
-                <div class="skill-item">CSS3</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Web Development</div>
-                <div class="skill-item">Team Leadership</div>
-                <div class="skill-item">Problem Solving</div>
-            </div>
-        </div>
-    </section>
+            <div class="hero-spotlight" aria-hidden="true"></div>
 
-    <section id="resume" class="container bg-light">
-        <h2 class="section-title">Resume</h2>
-        
-        <div class="resume-grid">
-            <div class="resume-column">
-                <h3><i class="fas fa-briefcase"></i> Experience</h3>
-                <div id="experience-list"></div>
+            <div class="hero-inner">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="status-badge reveal"><span class="pulse"></span> Open to junior software &amp; AI roles</span>
+
+                        <h1 class="reveal" style="--i:1">
+                            Mattia <span class="grad-text">De&nbsp;Santis</span>
+                        </h1>
+
+                        <p class="role reveal" style="--i:2">
+                            Project Engineer, Computer &amp; AI Engineer <span class="sep">/</span> Team &amp; Operations Leader
+                        </p>
+
+                        <p class="tagline reveal" style="--i:3">
+                            From leading teams on the field to <b>building intelligent systems in code</b>. I bring years of operational leadership into software &amp; AI.
+                        </p>
+
+                        <div class="hero-cta reveal" style="--i:4">
+                            <a href="#contact" class="btn">
+                                Let's talk <svg class="icon arrow"><use href="#i-arrow"/></svg>
+                            </a>
+                            <a href="#resume" class="btn btn-ghost">
+                                <svg class="icon"><use href="#i-briefcase"/></svg> View resume
+                            </a>
+                        </div>
+
+                        <div class="hero-meta reveal" style="--i:5">
+                            <span><svg class="icon"><use href="#i-pin"/></svg> Rome, Italy · open to remote</span>
+                            <span><svg class="icon"><use href="#i-code"/></svg> Currently studying Computer Eng. &amp; AI</span>
+                        </div>
+
+                        <div class="stats" id="statsGrid">
+                            <div class="stat reveal" style="--i:6">
+                                <div class="num" data-count="6" data-suffix="+"><span class="val">0</span><span class="suffix">+</span></div>
+                                <div class="label">Years leading teams &amp; operations</div>
+                            </div>
+                            <div class="stat reveal" style="--i:7">
+                                <div class="num" data-count="3"><span class="val">0</span></div>
+                                <div class="label">Degrees across sport &amp; engineering</div>
+                            </div>
+                            <div class="stat reveal" style="--i:8">
+                                <div class="num"><span class="val-static">2025</span></div>
+                                <div class="label">Pivoted into software &amp; AI</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="resume-column">
-                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <div id="education-list"></div>
+            <div class="scroll-cue" aria-hidden="true">
+                <span class="mouse"></span>
+                Scroll
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> mattiads7@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +39 345 8581793</p>
-                <p><i class="fas fa-map-marker-alt"></i> Rome, Italy</p>
-                
-                <div class="social-links" style="margin-top: 20px;">
-                    <a href="https://www.linkedin.com/in/mattia1997" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
-                        <i class="fab fa-linkedin"></i> LinkedIn Profile
+        <!-- ── About / the pivot ───────────────────────────────────────── -->
+        <section id="about" class="section container">
+            <div class="section-head reveal">
+                <span class="eyebrow">01 — About</span>
+                <h2 class="section-title">Leadership first. Then I learned to build it.</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-body">
+                    <p class="lead-line reveal">
+                        I spent years <span class="accent">running teams, budgets and operations</span> — now I'm channelling that same discipline into software and AI.
+                    </p>
+                    <p class="reveal" style="--i:1">
+                        My background is in <b>sport sciences and management</b>: coordinating people, solving daily operational problems, and owning outcomes under pressure. Roles from personal training to financial and credit management taught me how systems and teams actually behave in the real world.
+                    </p>
+                    <p class="reveal" style="--i:2">
+                        In 2025 I committed to a <b>Bachelor's in Computer Engineering &amp; AI</b>. I'm learning to translate the way I think about people and processes into clean code and intelligent systems — with genuine curiosity for how AI reshapes the tools we use every day.
+                    </p>
+                    <p class="reveal" style="--i:3">
+                        I'm looking for a <b>software engineer or AI role</b> where operational maturity and a fast-learning mindset matter as much as raw syntax.
+                    </p>
+                </div>
+
+                <aside class="pivot-card reveal" style="--i:2">
+                    <h3>The pivot</h3>
+                    <div class="pivot-row">
+                        <span class="ico"><svg class="icon"><use href="#i-users"/></svg></span>
+                        <span class="txt"><strong>Sport &amp; operations</strong><span>Teams · logistics · management</span></span>
+                    </div>
+                    <div class="pivot-arrow"><svg class="icon"><use href="#i-arrow"/></svg></div>
+                    <div class="pivot-row">
+                        <span class="ico"><svg class="icon"><use href="#i-code"/></svg></span>
+                        <span class="txt"><strong>Software engineering</strong><span>Web · Python · problem solving</span></span>
+                    </div>
+                    <div class="pivot-arrow"><svg class="icon"><use href="#i-arrow"/></svg></div>
+                    <div class="pivot-row">
+                        <span class="ico"><svg class="icon"><use href="#i-spark"/></svg></span>
+                        <span class="txt"><strong>Artificial intelligence</strong><span>The direction I'm building toward</span></span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ── Skills ──────────────────────────────────────────────────── -->
+        <section id="skills" class="section container">
+            <div class="section-head reveal">
+                <span class="eyebrow">02 — Toolkit</span>
+                <h2 class="section-title">What I work with</h2>
+                <p class="section-lead">Two toolkits that reinforce each other — the engineering I'm building and the leadership I already have.</p>
+            </div>
+
+            <div class="skills-groups">
+                <div class="skill-card reveal">
+                    <div class="head">
+                        <span class="ico"><svg class="icon"><use href="#i-code"/></svg></span>
+                        <h3>Engineering</h3>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">HTML5</span>
+                        <span class="chip">CSS3</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">Web Development</span>
+                        <span class="chip">Git</span>
+                        <span class="chip">Responsive UI</span>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal" style="--i:1">
+                    <div class="head">
+                        <span class="ico"><svg class="icon"><use href="#i-users"/></svg></span>
+                        <h3>Leadership &amp; operations</h3>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">Team Leadership</span>
+                        <span class="chip">Problem Solving</span>
+                        <span class="chip">Operations Management</span>
+                        <span class="chip">Negotiation</span>
+                        <span class="chip">Stakeholder Coordination</span>
+                        <span class="chip">Process Ownership</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Resume ──────────────────────────────────────────────────── -->
+        <section id="resume" class="section container">
+            <div class="section-head reveal">
+                <span class="eyebrow">03 — Resume</span>
+                <h2 class="section-title">Experience &amp; education</h2>
+            </div>
+
+            <div class="resume-grid">
+                <div class="resume-column">
+                    <div class="col-head reveal">
+                        <span class="ico"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="timeline" id="experience-list"></div>
+                </div>
+
+                <div class="resume-column">
+                    <div class="col-head reveal">
+                        <span class="ico"><svg class="icon"><use href="#i-cap"/></svg></span>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="timeline" id="education-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Contact ─────────────────────────────────────────────────── -->
+        <section id="contact" class="section container">
+            <div class="section-head reveal">
+                <span class="eyebrow">04 — Contact</span>
+                <h2 class="section-title">Let's build something</h2>
+                <p class="section-lead">Open to employment opportunities, collaborations and a good conversation about tech.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <a class="info-item reveal" href="mailto:mattiads7@gmail.com">
+                        <span class="ico"><svg class="icon"><use href="#i-mail"/></svg></span>
+                        <span><span class="k">EMAIL</span><br><span class="v">mattiads7@gmail.com</span></span>
                     </a>
+                    <a class="info-item reveal" style="--i:1" href="tel:+393458581793">
+                        <span class="ico"><svg class="icon"><use href="#i-phone"/></svg></span>
+                        <span><span class="k">PHONE</span><br><span class="v">+39 345 8581793</span></span>
+                    </a>
+                    <div class="info-item reveal" style="--i:2">
+                        <span class="ico"><svg class="icon"><use href="#i-pin"/></svg></span>
+                        <span><span class="k">LOCATION</span><br><span class="v">Rome, Italy</span></span>
+                    </div>
+
+                    <div class="social-row reveal" style="--i:3">
+                        <a href="https://www.linkedin.com/in/mattia1997" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                            <svg class="icon"><use href="#i-linkedin"/></svg>
+                        </a>
+                        <a href="https://github.com/MattiaDeSantis97" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                            <svg class="icon"><use href="#i-github"/></svg>
+                        </a>
+                    </div>
                 </div>
+
+                <form id="contactForm" action="https://send.pageclip.co/EAen4DVpq4oYUfmn7xLH9wUgQ3KFxObN" class="pageclip-form contact-form reveal" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn pageclip-form__submit">
+                        <span>Send message</span>
+                        <svg class="icon arrow"><use href="#i-arrow"/></svg>
+                    </button>
+                </form>
             </div>
-            
-            <form id="contactForm" action="https://send.pageclip.co/EAen4DVpq4oYUfmn7xLH9wUgQ3KFxObN" class="pageclip-form" method="post">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required />
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com" required />
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-                </div>
-                <button type="submit" class="btn pageclip-form__submit">
-                    <span>Send</span>
-                </button>
-            </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Mattia De Santis. All Rights Reserved.</p>
+        <div class="container footer-inner">
+            <p class="copy">© <span id="year">2026</span> Mattia De Santis · Built with curiosity in Rome.</p>
+            <a href="#home" class="back-top">Back to top <svg class="icon" style="width:14px;height:14px"><use href="#i-up"/></svg></a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
 </html>
-
-
