@@ -6,6 +6,12 @@
 // ── Resume data ─────────────────────────────────────────────────────────────
 const experienceData = [
   {
+    role: "Project Engineer & AI Specialist",
+    company: "Studio Ferrando",
+    period: "2026 — Present",
+    description: "I turn the founder's ideas and briefs into working products, building most of them in Python with AI and LLM tooling. My work spans full-stack development, software engineering and machine learning."
+  },
+  {
     role: "Credit Care Specialist",
     company: "Europa Factor Spa",
     period: "2025 — 2026",
