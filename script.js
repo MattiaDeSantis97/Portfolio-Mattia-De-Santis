@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   `);
 
   setYear();
+  setAge();
   initTheme();
   initMobileNav();
   initScrollProgress();
@@ -99,6 +100,20 @@ function renderTimeline(containerId, data, template) {
 function setYear() {
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
+}
+
+// Age computed from date of birth, so it self-increments every year on 21 June.
+function setAge() {
+  const el = document.getElementById('age');
+  if (!el) return;
+  const dob = new Date(1997, 5, 21); // 21 June 1997 (month is 0-based)
+  const now = new Date();
+  let age = now.getFullYear() - dob.getFullYear();
+  const beforeBirthday =
+    now.getMonth() < dob.getMonth() ||
+    (now.getMonth() === dob.getMonth() && now.getDate() < dob.getDate());
+  if (beforeBirthday) age--;
+  el.textContent = age;
 }
 
 // ── Theme toggle (persisted, respects system preference) ────────────────────
