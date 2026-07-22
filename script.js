@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initReveal();      // must run after timeline items exist
   initStatCounters();
+  initContactForm();
 
   if (!prefersReduced && !isTouch()) {
     initSpotlight();
@@ -252,6 +253,42 @@ function initMagnetic() {
       btn.style.transform = `translate(${x}px, ${y}px)`;
     });
     btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
+  });
+}
+
+// ── Contact form (Web3Forms) ────────────────────────────────────────────────
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  const status = document.getElementById('formStatus');
+  const btn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btn.disabled = true;
+    status.className = 'form-status';
+    status.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.success) {
+        status.classList.add('ok');
+        status.textContent = 'Thanks — your message is on its way.';
+        form.reset();
+      } else {
+        status.classList.add('err');
+        status.textContent = json.message || 'Something went wrong. Please email me directly.';
+      }
+    } catch {
+      status.classList.add('err');
+      status.textContent = 'Network error. Please email me directly.';
+    } finally {
+      btn.disabled = false;
+    }
   });
 }
 

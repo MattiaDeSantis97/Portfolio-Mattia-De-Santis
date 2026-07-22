@@ -579,6 +579,9 @@ section { position: relative; }
 .contact-form textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-glow); }
 .contact-form textarea { resize: vertical; min-height: 130px; }
 .contact-form .btn { width: 100%; margin-top: 0.4rem; }
+.form-status { margin-top: 0.9rem; font-size: 0.9rem; min-height: 1.2em; color: var(--fg-muted); }
+.form-status.ok { color: #34d399; }
+.form-status.err { color: #f87171; }
 
 /* ── Footer ────────────────────────────────────────────────────────────── */
 footer {

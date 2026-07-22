@@ -13,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
 <body>
     <!-- inline SVG icon sprite (Lucide-style) -->
@@ -272,7 +271,13 @@
                     </div>
                 </div>
 
-                <form id="contactForm" action="https://send.pageclip.co/EAen4DVpq4oYUfmn7xLH9wUgQ3KFxObN" class="pageclip-form contact-form reveal" method="post">
+                <form id="contactForm" action="https://api.web3forms.com/submit" class="contact-form reveal" method="post">
+                    <!-- Get your free access key at https://web3forms.com (enter your email, key arrives by mail) -->
+                    <input type="hidden" name="access_key" value="028b26a4-5aff-465b-8417-adda723accee" />
+                    <input type="hidden" name="subject" value="New message from your portfolio" />
+                    <input type="hidden" name="from_name" value="Portfolio contact form" />
+                    <!-- honeypot: bots fill this, humans don't -->
+                    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -285,10 +290,11 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
                     </div>
-                    <button type="submit" class="btn pageclip-form__submit">
+                    <button type="submit" class="btn">
                         <span>Send message</span>
                         <svg class="icon arrow"><use href="#i-arrow"/></svg>
                     </button>
+                    <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
@@ -302,6 +308,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
 </html>
